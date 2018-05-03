@@ -1,0 +1,137 @@
+#banner h3 {
+    margin: 0;
+    padding-top:10px;
+    color: white;
+    display:inline-block;
+    font-size: 20px;
+}
+
+#banner {
+    height: 50px;
+    width: 100%;
+    background-color: dodgerblue;
+    margin: 0;
+    display:inline-block;
+}
+
+#bannerbuttons {
+    display: inline;  
+    margin-left: 200px;
+    border-radius: 7px;
+}
+
+#gohome {
+    border-radius: 7px;
+    background-color: rgb(110,183,255);
+    color: white;
+}
+
+#addnew {
+    border-radius: 7px;
+    background-color: rgb(110,183,255);
+    color: white;
+}
+
+.contactform {
+    height: 300px;
+    width: 600px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 4px;
+    margin: 25px 0px 0px 50px;
+}
+
+.graybar {
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+    padding-top: 13px;
+}
+
+.contactfields {
+    margin-left: 15px;
+}
+
+#submit {
+    border-radius: 7px;
+    color: white;
+    background-color: seagreen;
+    margin-left: 510px;
+    border-radius: 5px;
+}
+
+.inputfield {
+    width: 575px;
+}
+
+#detailsform {
+    height: 220px;
+    width: 600px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 4px;
+    margin: 25px 0px 0px 50px;
+}
+
+#detailsform strong {
+    border-radius: 4px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+table {
+    width: 800px;
+    margin-left: 80px;
+    border-style: none;
+}
+
+tr {
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+}
+
+#blue{
+    margin: 5px;
+    border-radius: 7px;
+    background-color: white;
+    border: 2px solid blue;
+    color: blue;
+}
+
+#yellow{
+    margin: 5px;
+    border-radius: 7px;
+    background-color: white;
+    border: 2px solid gold;
+    color: gold;
+}
+
+#red{
+    margin: 5px;
+    border-radius: 7px;
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+}
+
+#deletedetail {
+    display: inline-block;
+    border-radius: 7px;
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+    margin-left: 520px;
+
+}
+
+#editdetail {
+    border-radius: 7px;
+    background-color: white;
+    border: 2px solid gold;
+    color: gold;
+    margin-left: 520px;
+}
