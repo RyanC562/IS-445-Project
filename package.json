@@ -1,26 +1,18 @@
 {
-  "name": "rest_api",
-  "version": "1.0.0",
-  "description": "Final Project",
-  "main": "index.js",
+  "name": "is-445-project",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "ejs": "^2.5.7",
-    "express": "^4.16.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ryanc1995/IS-445-Project.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Ryanc1995/IS-445-Project/issues"
-  },
-  "homepage": "https://github.com/Ryanc1995/IS-445-Project#readme"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.1.1",
+    "morgan": "~1.9.0"
+  }
 }
