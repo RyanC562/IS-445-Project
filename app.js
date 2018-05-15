@@ -3,45 +3,33 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").load();
 }
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require("express")
+const path = require("path")
+const bodyParser = require('body-parser')
+const apiRouter = require('./api')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const app = express()
+const DEFAULT_PORT = 8088
+const port = process.env.PORT || DEFAULT_PORT
 
-var app = express();
+app.set("view engine", "ejs")
+app.set("views", path.resolve(__dirname, "views"))
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+const assetsPath = path.resolve(__dirname, 'views/assets')
+app.use(express.static(assetsPath))
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//Make sure to parse request JSON as req.body
+app.use(bodyParser.json({ type: 'application/json' }))
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.get('/', (req, res) => {
+    res.render('home')
+})
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+app.use('/api', apiRouter)
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+app.listen(port, () =>{
+    console.log(`App started on ${port}`)
+})
 
 const mongoose = require("mongoose");
 
