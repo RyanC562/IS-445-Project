@@ -55,12 +55,12 @@ $(document).ready(function () {
 function validation(user){
     var phoneregex = /^((?![0-1])[0-9]{10})$/g;
     if(phoneregex.test(user.phone) == false){
-        alert("Phone number must be 10 numbers long and cannot start with 0 or 1");
+        alert("Phone number must be 10 numbers long, can't start with 0 or 1");
         return false;
     }
     var emailregex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (emailregex.test(user.email) == false) {
-        alert('Email is invalid');
+        alert('Email invalid');
         return false;
     }
     if (user.name.length == 0){
