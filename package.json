@@ -1,7 +1,7 @@
 {
   "name": "rest_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Final Project",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
@@ -14,5 +14,13 @@
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryanc1995/IS-445-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ryanc1995/IS-445-Project/issues"
+  },
+  "homepage": "https://github.com/Ryanc1995/IS-445-Project#readme"
 }
