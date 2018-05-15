@@ -9,7 +9,7 @@ function getUsers() {
         return JSON.parse(content)
     } catch (err) {
         if (err.code === 'ENOENT') {
-            console.log('file does not exist')
+            console.log('file not exists')
             return []
         } else {
             console.log(err)
