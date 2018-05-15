@@ -18,8 +18,7 @@ api.post('/user', (req, res) => {
     }
 
     users.push(newUser)
-    //check to ensure values are saved
-    console.log(users); 
+    console.log(users); //checking to make sure values are saved
     store.saveUsers(users)
 
     res.json(users)
@@ -31,18 +30,13 @@ api.get('/user', (req, res) => {
 })
 
 api.delete('/user/:id', (req, res) => {
-    //get id
-    const id = req.params.id; 
-    //get users
-    const users = store.getUsers(); 
+    const id = req.params.id; //get the specific id
+    const users = store.getUsers(); //get the users
     let deleted = false;
     let contactindex = users.length-1;
-    //while loop runs unless user is deleted
-    while (!deleted) { 
-        //check id of array[index]==specifc id
-        if (users[contactindex].id == id) { 
-            //runner stores indexes
-            var runner = 0; 
+    while (!deleted) { //while loop runs until user is deleted
+        if (users[contactindex].id == id) { //checking if id of array[index]==specifc id
+            var runner = 0; //runner to store new indeces
             while (contactindex != users.length-1) {
                 runner = users[contactindex];
                 users[contactindex] = users[contactindex + 1];
@@ -54,24 +48,18 @@ api.delete('/user/:id', (req, res) => {
         }
         contactindex--;
     }
-    //save Users
-    store.saveUsers(users) 
+    store.saveUsers(users) //save the user
     res.json(users);
 })
 
-//post route to find user by id
-api.post('/user/specificuser', (req, res) => { 
-     //get the users from store
-    const users = store.getUsers();
-    //get the user from req.body
-    const user = req.body; 
-    //initialize user id to be moved based on index
-    let specificuserid; 
+api.post('/user/specificuser', (req, res) => { //post route to get a specific user by id
+    const users = store.getUsers(); //get the users from store
+    const user = req.body; //grab the user from req.body
+    let specificuserid; //initialize the specific user id to be moved based on index
     for (let i = users.length - 1; i >= 0; i--) {
         if (users[i].name == user.name && users[i].email == user.email && users[i].phone == user.phone) {
-            //if user id matches, it becomes users[i]
-            specificuserid = users[i]; 
-            res.json(JSON.stringify(specificuserid));
+            specificuserid = users[i]; //if the user of the id matches, the specific id becomes users[i]
+            res.json(JSON.stringify(specificuserid)); //stringify that i
         }
         else {
             continue;
@@ -79,13 +67,11 @@ api.post('/user/specificuser', (req, res) => {
     }
 })
 
-//update user id
-api.put('/user/:id', (req, res) => { 
+api.put('/user/:id', (req, res) => { //updated a user based on their id
     const contactChanged = req.body;
-    //get user from store
-    let users = store.getUsers(); 
+    let users = store.getUsers(); //get the user from store
     let edited = false;
-    let index = 0; 
+    let index = 0; //initialize
     while (!edited && index < users.length) {
         if (users[index].id == contactChanged.id) {
             users[index].name = contactChanged.name;

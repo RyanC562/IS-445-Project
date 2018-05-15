@@ -1,8 +1,3 @@
-// load env
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").load();
-}
-
 const express = require("express")
 const path = require("path")
 const bodyParser = require('body-parser')
@@ -18,7 +13,7 @@ app.set("views", path.resolve(__dirname, "views"))
 const assetsPath = path.resolve(__dirname, 'views/assets')
 app.use(express.static(assetsPath))
 
-//Make sure to parse request JSON as req.body
+// ! important: to parse request JSON as req.body
 app.use(bodyParser.json({ type: 'application/json' }))
 
 app.get('/', (req, res) => {
@@ -31,13 +26,3 @@ app.listen(port, () =>{
     console.log(`App started on ${port}`)
 })
 
-const mongoose = require("mongoose");
-
-const user = process.env.MDB_USER;
-const passwd = process.env.MDB_PASSWORD;
-
-mongoose
-  .connect(`mongodb://${user}:${passwd}@ds014648.mlab.com:14648/is445`)
-  .then(() => console.log("connection successful"))
-  .catch(err => console.error(err));
-module.exports = app;
