@@ -22,13 +22,13 @@
 
 #gohome {
     border-radius: 7px;
-    background-color: rgb(110,183,255);
+    background-color: lightblue;
     color: white;
 }
 
 #addnew {
     border-radius: 7px;
-    background-color: rgb(110,183,255);
+    background-color: lightblue;
     color: white;
 }
 
@@ -98,16 +98,16 @@ tr {
     margin: 5px;
     border-radius: 7px;
     background-color: white;
-    border: 2px solid blue;
-    color: blue;
+    border: 2px solid lightblue;
+    color: lightblue;
 }
 
 #yellow{
     margin: 5px;
     border-radius: 7px;
     background-color: white;
-    border: 2px solid yellow;
-    color: yellow;
+    border: 2px solid goldenrod;
+    color: goldenrod;
 }
 
 #red{
@@ -131,7 +131,7 @@ tr {
 #editdetail {
     border-radius: 7px;
     background-color: white;
-    border: 2px solid yellow;
-    color: yellow;
+    border: 2px solid goldenrod;
+    color: goldenrod;
     margin-left: 520px;
 }
