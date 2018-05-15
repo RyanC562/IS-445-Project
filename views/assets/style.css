@@ -9,7 +9,7 @@
 #banner {
     height: 50px;
     width: 100%;
-    background-color: lightblue;
+    background-color: blue;
     margin: 0;
     display:inline-block;
 }
@@ -22,13 +22,13 @@
 
 #gohome {
     border-radius: 7px;
-    background-color: lightblue;
+    background-color: blue;
     color: white;
 }
 
 #addnew {
     border-radius: 7px;
-    background-color: lightblue;
+    background-color: blue;
     color: white;
 }
 
@@ -77,7 +77,7 @@
 
 #detailsform strong {
     border-radius: 4px;
-    background-color: lightblue;
+    background-color: blue;
     color: white;
 }
 
@@ -98,7 +98,7 @@ tr {
     margin: 5px;
     border-radius: 7px;
     background-color: white;
-    border: 2px solid lightblue;
+    border: 2px solid blue;
     color: lightblue;
 }
 
@@ -106,8 +106,8 @@ tr {
     margin: 5px;
     border-radius: 7px;
     background-color: white;
-    border: 2px solid goldenrod;
-    color: goldenrod;
+    border: 2px solid gold;
+    color: gold;
 }
 
 #red{
@@ -131,7 +131,7 @@ tr {
 #editdetail {
     border-radius: 7px;
     background-color: white;
-    border: 2px solid goldenrod;
-    color: goldenrod;
+    border: 2px solid gold;
+    color: gold;
     margin-left: 520px;
 }
